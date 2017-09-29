@@ -9,5 +9,6 @@ namespace POSC.ModelsView
 {
   public  class FiscalDataViewModel: FiscalData
     {
+
     }
 }
