@@ -10,11 +10,11 @@ none
 false
 DEBUG;TRACE
 C:\Users\Angel.Canales\Source\Repos\POSC\POSC\App.xaml
-81732046238
+9-1342345239
 
-191036895828
+21-1563762561
 35506032315
-Logins.xaml;UserControls\Address.xaml;UserControls\EmployeesType.xaml;UserControls\RegisterEmployee.xaml;UserControls\ResidentialArea.xaml;UserControls\Sector.xaml;UserControls\Store.xaml;View\MenuPOSC.xaml;
+Logins.xaml;UserControls\Address.xaml;UserControls\EmployeesType.xaml;UserControls\RegisterUser.xaml;UserControls\ResidentialArea.xaml;UserControls\Sector.xaml;UserControls\Store.xaml;View\MenuPOSC.xaml;View\RegisterEmployees.xaml;
 
-True
+False
 

@@ -23,6 +23,5 @@ C:\Users\Angel.Canales\Source\Repos\POSC\DataBase\bin\Debug\EntityFramework.xml
 C:\Users\Angel.Canales\Source\Repos\POSC\DataBase\bin\Debug\EntityFramework.SqlServer.xml
 C:\Users\Angel.Canales\Source\Repos\POSC\DataBase\bin\Debug\Microsoft.AspNet.Identity.Core.xml
 C:\Users\Angel.Canales\Source\Repos\POSC\DataBase\bin\Debug\Microsoft.AspNet.Identity.EntityFramework.xml
-C:\Users\Angel.Canales\Source\Repos\POSC\DataBase\obj\Debug\POSC.DataBase.csprojResolveAssemblyReference.cache
 C:\Users\Angel.Canales\Source\Repos\POSC\DataBase\obj\Debug\POSC.DataBase.dll
 C:\Users\Angel.Canales\Source\Repos\POSC\DataBase\obj\Debug\POSC.DataBase.pdb

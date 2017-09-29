@@ -32,5 +32,7 @@ namespace DataBase.Models
 
         public Store Store { get; set; }
 
+
+        
     }
 }

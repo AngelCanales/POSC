@@ -25,8 +25,27 @@ namespace POSC
     {
         private readonly LoginViewModeL loginViewModeL;
         UserManager<IdentityUser> userManager;
-        public MainWindow()
+
+        private readonly RegisterEmployeeViewModel registerEmployeeViewModel;
+        private readonly EmployeesTypeLogic employeesTypeLogic;
+        private readonly StoreLogic storeLogic;
+        private readonly ResidentialAreaLogic residentialAreaLogic;
+        private readonly SectorLogic sectorLogic;
+
+        public MainWindow(EmployeesTypeLogic employeesTypeLogic, StoreLogic storeLogic, ResidentialAreaLogic residentialAreaLogic, SectorLogic sectorLogic)
         {
+
+            this.sectorLogic = sectorLogic;
+            this.residentialAreaLogic = residentialAreaLogic;
+            this.storeLogic = storeLogic;
+            this.employeesTypeLogic = employeesTypeLogic;
+            var x = sectorLogic.GetAll();
+            this.registerEmployeeViewModel = new RegisterEmployeeViewModel();
+            registerEmployeeViewModel.Sector = x;
+            registerEmployeeViewModel.Store = storeLogic.GetAll();
+            registerEmployeeViewModel.ResidentialArea =  residentialAreaLogic.GetAll();
+            registerEmployeeViewModel.EmployeesType = employeesTypeLogic.GetAll();
+
             userManager = new UserManager<IdentityUser>(new UserStore<IdentityUser>(new IdentityDbContext("POSC")));
             this.loginViewModeL = new LoginViewModeL();
             this.DataContext = loginViewModeL;
@@ -40,7 +59,7 @@ namespace POSC
             
             if (user != null)
             {
-                     MenuPOSC form = new  MenuPOSC();
+                     RegisterEmployee form =   new RegisterEmployee(null,null,null,null);
                      form.Owner = this;
                      form.Show();
             }

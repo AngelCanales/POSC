@@ -406,7 +406,7 @@ namespace POSC.Initializer
                 Street = ""
             };
 
-            var storer = new Store
+            var pstorer = new Store
             { Name = "Canales", Description = "la mejor tienda", Address = address};
 
 
@@ -429,14 +429,14 @@ namespace POSC.Initializer
             {
                 User = u,
                 EmployeesType = employeesType,
-                Store = storer
+                Store = pstorer
             };
 
             var EmployeesATM = new Employees
             {
                 User = u1,
                 EmployeesType = employeesType1,
-                Store = storer,
+                Store = pstorer,
 
             };
             context.Employees.Add(EmployeesAdmin);
@@ -556,7 +556,7 @@ namespace POSC.Initializer
                 CurrenInvoiceNumber = 1,
                 PrintCode = "438096-072724-F94CB5-E1AB62-39F534-8D",
                 ValidUntilDate = DateTime.Today.AddDays(50),
-                Store = storer
+                Store = pstorer
             };
 
             context.FiscalData.Add(fiscalData1);
@@ -565,7 +565,7 @@ namespace POSC.Initializer
             {
                 context.SaveChanges();
             }
-            catch (Exception ex)
+            catch (Exception )
             {
                 // TODO: LOGS
                 throw;

@@ -16,11 +16,11 @@ using System.Windows.Shapes;
 namespace POSC.UserControls
 {
     /// <summary>
-    /// Interaction logic for RegisterEmployee.xaml
+    /// Interaction logic for RegisterUser.xaml
     /// </summary>
-    public partial class RegisterEmployee : UserControl
+    public partial class RegisterUser : UserControl
     {
-        public RegisterEmployee()
+        public RegisterUser()
         {
             InitializeComponent();
         }
