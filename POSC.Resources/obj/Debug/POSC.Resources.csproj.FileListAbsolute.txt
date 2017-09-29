@@ -4,3 +4,9 @@ C:\Users\Angel.Canales\Desktop\Metro\angel\POSC\POSC.Resources\bin\Debug\POSC.Re
 C:\Users\Angel.Canales\Desktop\Metro\angel\POSC\POSC.Resources\obj\Debug\POSC.Resources.csprojResolveAssemblyReference.cache
 C:\Users\Angel.Canales\Desktop\Metro\angel\POSC\POSC.Resources\obj\Debug\POSC.Resources.exe
 C:\Users\Angel.Canales\Desktop\Metro\angel\POSC\POSC.Resources\obj\Debug\POSC.Resources.pdb
+C:\Users\Angel.Canales\Source\Repos\POSC\POSC.Resources\bin\Debug\POSC.Resources.exe.config
+C:\Users\Angel.Canales\Source\Repos\POSC\POSC.Resources\bin\Debug\POSC.Resources.exe
+C:\Users\Angel.Canales\Source\Repos\POSC\POSC.Resources\bin\Debug\POSC.Resources.pdb
+C:\Users\Angel.Canales\Source\Repos\POSC\POSC.Resources\obj\Debug\POSC.Resources.csprojResolveAssemblyReference.cache
+C:\Users\Angel.Canales\Source\Repos\POSC\POSC.Resources\obj\Debug\POSC.Resources.exe
+C:\Users\Angel.Canales\Source\Repos\POSC\POSC.Resources\obj\Debug\POSC.Resources.pdb
