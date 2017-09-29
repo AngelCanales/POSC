@@ -1,0 +1,14 @@
+C:\Users\Angel.Canales\Desktop\Metro\angel\POSC\DataBase\bin\Debug\POSC.DataBase.dll.config
+C:\Users\Angel.Canales\Desktop\Metro\angel\POSC\DataBase\bin\Debug\POSC.DataBase.dll
+C:\Users\Angel.Canales\Desktop\Metro\angel\POSC\DataBase\bin\Debug\POSC.DataBase.pdb
+C:\Users\Angel.Canales\Desktop\Metro\angel\POSC\DataBase\bin\Debug\EntityFramework.dll
+C:\Users\Angel.Canales\Desktop\Metro\angel\POSC\DataBase\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Angel.Canales\Desktop\Metro\angel\POSC\DataBase\bin\Debug\Microsoft.AspNet.Identity.Core.dll
+C:\Users\Angel.Canales\Desktop\Metro\angel\POSC\DataBase\bin\Debug\Microsoft.AspNet.Identity.EntityFramework.dll
+C:\Users\Angel.Canales\Desktop\Metro\angel\POSC\DataBase\bin\Debug\EntityFramework.xml
+C:\Users\Angel.Canales\Desktop\Metro\angel\POSC\DataBase\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Angel.Canales\Desktop\Metro\angel\POSC\DataBase\bin\Debug\Microsoft.AspNet.Identity.Core.xml
+C:\Users\Angel.Canales\Desktop\Metro\angel\POSC\DataBase\bin\Debug\Microsoft.AspNet.Identity.EntityFramework.xml
+C:\Users\Angel.Canales\Desktop\Metro\angel\POSC\DataBase\obj\Debug\POSC.DataBase.csprojResolveAssemblyReference.cache
+C:\Users\Angel.Canales\Desktop\Metro\angel\POSC\DataBase\obj\Debug\POSC.DataBase.dll
+C:\Users\Angel.Canales\Desktop\Metro\angel\POSC\DataBase\obj\Debug\POSC.DataBase.pdb
