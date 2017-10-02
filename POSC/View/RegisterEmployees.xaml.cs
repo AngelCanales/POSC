@@ -1,8 +1,12 @@
-﻿using DataBase.Models;
+﻿using DataBase.Contexts;
+using DataBase.Models;
 using Logic.Logic;
+using Ninject;
+using Ninject.Extensions.Factory;
 using POSC.ModelsView;
 using System;
 using System.Collections.Generic;
+using System.Data.Entity;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -27,6 +31,8 @@ namespace POSC.View
         private readonly StoreLogic storeLogic;
         private readonly ResidentialAreaLogic residentialAreaLogic;
         private readonly SectorLogic sectorLogic;
+
+       
         public RegisterEmployee(EmployeesTypeLogic employeesTypeLogic, StoreLogic storeLogic, ResidentialAreaLogic residentialAreaLogic, SectorLogic sectorLogic)
         {
             this.sectorLogic = sectorLogic;
@@ -34,6 +40,7 @@ namespace POSC.View
             this.storeLogic = storeLogic;
             this.employeesTypeLogic = employeesTypeLogic;
             var x = sectorLogic.GetAll();
+     
             this.registerEmployeeViewModel = new RegisterEmployeeViewModel();
             registerEmployeeViewModel.Sector = x;
             registerEmployeeViewModel.Store = storeLogic.GetAll();
@@ -42,5 +49,7 @@ namespace POSC.View
             this.DataContext = registerEmployeeViewModel;
             InitializeComponent();
         }
+
+       
     }
 }

@@ -14,7 +14,9 @@ namespace POSC
     using System.Windows;
 
     using Microsoft.AspNet.Identity.Owin;
-
+    using Ninject.Extensions.Factory;
+    using ModelsView;
+    using View;
 
     public partial class App : Application
     {
@@ -33,7 +35,6 @@ namespace POSC
             this.container = new StandardKernel();
         container.Bind<POSCContext>().To<POSCContext>();
             container.Bind<DbContext>().To<POSCContext>();
-
         }
 
         private void ComposeObjects()

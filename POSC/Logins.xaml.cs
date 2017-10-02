@@ -15,6 +15,8 @@ using System.Windows.Controls;
 using POSC.View;
 using Microsoft.AspNet.Identity.EntityFramework;
 using DataBase.Contexts;
+using Ninject;
+using Ninject.Extensions.Factory;
 
 namespace POSC
 {
@@ -26,28 +28,16 @@ namespace POSC
         private readonly LoginViewModeL loginViewModeL;
         UserManager<IdentityUser> userManager;
 
-        private readonly RegisterEmployeeViewModel registerEmployeeViewModel;
-        private readonly EmployeesTypeLogic employeesTypeLogic;
-        private readonly StoreLogic storeLogic;
-        private readonly ResidentialAreaLogic residentialAreaLogic;
-        private readonly SectorLogic sectorLogic;
+        private IKernel container;
 
-        public MainWindow(EmployeesTypeLogic employeesTypeLogic, StoreLogic storeLogic, ResidentialAreaLogic residentialAreaLogic, SectorLogic sectorLogic)
-        {
+        public MainWindow() { 
 
-            this.sectorLogic = sectorLogic;
-            this.residentialAreaLogic = residentialAreaLogic;
-            this.storeLogic = storeLogic;
-            this.employeesTypeLogic = employeesTypeLogic;
-            var x = sectorLogic.GetAll();
-            this.registerEmployeeViewModel = new RegisterEmployeeViewModel();
-            registerEmployeeViewModel.Sector = x;
-            registerEmployeeViewModel.Store = storeLogic.GetAll();
-            registerEmployeeViewModel.ResidentialArea =  residentialAreaLogic.GetAll();
-            registerEmployeeViewModel.EmployeesType = employeesTypeLogic.GetAll();
+           
 
             userManager = new UserManager<IdentityUser>(new UserStore<IdentityUser>(new IdentityDbContext("POSC")));
             this.loginViewModeL = new LoginViewModeL();
+
+
             this.DataContext = loginViewModeL;
             InitializeComponent();
         }
@@ -59,7 +49,8 @@ namespace POSC
             
             if (user != null)
             {
-                     RegisterEmployee form =   new RegisterEmployee(null,null,null,null);
+                ConfigureContainer();
+                RegisterEmployee form = this.container.Get<RegisterEmployee>(); //new RegisterEmployee();
                      form.Owner = this;
                      form.Show();
             }
@@ -69,6 +60,13 @@ namespace POSC
             }
 
            
+        }
+
+        private void ConfigureContainer()
+        {
+            this.container = new StandardKernel();
+
+            container.Bind<RegisterEmployeeViewModel>().ToFactory();
         }
         private void button_Click(object sender, RoutedEventArgs e)
         {

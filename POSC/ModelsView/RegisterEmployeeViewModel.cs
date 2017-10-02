@@ -1,4 +1,5 @@
 ﻿using DataBase.Models;
+using Logic.Logic;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
@@ -10,6 +11,9 @@ namespace POSC.ModelsView
 {
 public  class RegisterEmployeeViewModel
     {
+       
+       
+     
         public int EmployeesTypeID { get; set; }
         public ICollection<EmployeesType> EmployeesType { get; set; }
 

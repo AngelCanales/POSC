@@ -141,3 +141,6 @@ C:\Users\Angel.Canales\Source\Repos\POSC\POSC\obj\Debug\POSC.Properties.Resource
 C:\Users\Angel.Canales\Source\Repos\POSC\POSC\obj\Debug\POSC.csproj.GenerateResource.Cache
 C:\Users\Angel.Canales\Source\Repos\POSC\POSC\obj\Debug\POSC.exe
 C:\Users\Angel.Canales\Source\Repos\POSC\POSC\obj\Debug\POSC.pdb
+C:\Users\Angel.Canales\Source\Repos\POSC\POSC\bin\Debug\Castle.Core.dll
+C:\Users\Angel.Canales\Source\Repos\POSC\POSC\bin\Debug\Ninject.Extensions.Factory.dll
+C:\Users\Angel.Canales\Source\Repos\POSC\POSC\bin\Debug\Castle.Core.xml
