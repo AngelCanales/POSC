@@ -10,3 +10,10 @@ C:\Users\Angel.Canales\Source\Repos\POSC\POSC.Resources\bin\Debug\POSC.Resources
 C:\Users\Angel.Canales\Source\Repos\POSC\POSC.Resources\obj\Debug\POSC.Resources.csprojResolveAssemblyReference.cache
 C:\Users\Angel.Canales\Source\Repos\POSC\POSC.Resources\obj\Debug\POSC.Resources.exe
 C:\Users\Angel.Canales\Source\Repos\POSC\POSC.Resources\obj\Debug\POSC.Resources.pdb
+C:\Users\canales\Source\Repos\POSC\POSC.Resources\bin\Debug\POSC.Resources.exe.config
+C:\Users\canales\Source\Repos\POSC\POSC.Resources\bin\Debug\POSC.Resources.exe
+C:\Users\canales\Source\Repos\POSC\POSC.Resources\bin\Debug\POSC.Resources.pdb
+C:\Users\canales\Source\Repos\POSC\POSC.Resources\obj\Debug\POSC.Resources.csprojResolveAssemblyReference.cache
+C:\Users\canales\Source\Repos\POSC\POSC.Resources\obj\Debug\POSC.Resources.csproj.CoreCompileInputs.cache
+C:\Users\canales\Source\Repos\POSC\POSC.Resources\obj\Debug\POSC.Resources.exe
+C:\Users\canales\Source\Repos\POSC\POSC.Resources\obj\Debug\POSC.Resources.pdb
