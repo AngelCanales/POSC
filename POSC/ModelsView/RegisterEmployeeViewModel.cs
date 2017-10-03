@@ -19,6 +19,7 @@ public  class RegisterEmployeeViewModel
 
         public string Name { get; set; }
 
+        public string Email { get; set; }
         public string RTN { get; set; }
 
         public string PhoneNumber1 { get; set; }
@@ -26,6 +27,8 @@ public  class RegisterEmployeeViewModel
         public string PhoneNumber2 { get; set; }
 
         public string ContactName { get; set; }
+
+        public int StoreId { get; set; }
 
         public ICollection<Store> Store { get; set; }
 

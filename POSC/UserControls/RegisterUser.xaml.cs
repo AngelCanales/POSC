@@ -24,5 +24,11 @@ namespace POSC.UserControls
         {
             InitializeComponent();
         }
+
+        private void passwordBox_PasswordChanged(object sender, RoutedEventArgs e)
+        {
+            var pass = sender as PasswordBox;
+         //   loginViewModeL.Password = "Proyectos8@";// pass.Password;
+        }
     }
 }

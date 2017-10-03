@@ -6,6 +6,11 @@
         xmlns:local="clr-namespace:POSC.View"
         xmlns:StackPanel="clr-namespace:POSC.UserControls"
         mc:Ignorable="d"
+        
+          xmlns:viewModel ="clr-namespace:POSC.ModelsView"
+
+         d:DataContext="{d:DesignInstance Type=viewModel:RegisterEmployeeViewModel, IsDesignTimeCreatable=True}"
+       
         Title="RegisterEmployee" Height="508.769" Width="712.055">
     <Grid>
         <StackPanel:Address HorizontalAlignment="Left" Height="270" Margin="366,18,0,0" VerticalAlignment="Top" Width="319" />

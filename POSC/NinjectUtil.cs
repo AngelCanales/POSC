@@ -10,16 +10,20 @@ using System.Threading.Tasks;
 
 namespace POSC
 {
-public class NinjectUtil<Tn>
+public class NinjectUtil<Tn,Tm>
          where Tn : class
+         where Tm : class
     {
         private IKernel container;
 
-      
+        public NinjectUtil()
+        {
+            ConfigureContainer();
+        }
        public void ConfigureContainer()
         {
             this.container = new StandardKernel();
-            container.Bind<Tn>().ToFactory();
+            container.Bind<Tm>().ToFactory();
 
         }
 

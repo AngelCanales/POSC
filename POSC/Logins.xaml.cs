@@ -28,7 +28,6 @@ namespace POSC
         private readonly LoginViewModeL loginViewModeL;
         UserManager<IdentityUser> userManager;
 
-        private IKernel container;
 
         public MainWindow() { 
 
@@ -49,8 +48,8 @@ namespace POSC
             
             if (user != null)
             {
-                var x = new NinjectUtil<RegisterEmployee>();
-                RegisterEmployee form = x.ComposeObjects(); //new RegisterEmployee();
+                var obj = new NinjectUtil<RegisterEmployee, RegisterEmployeeViewModel>();
+                RegisterEmployee form = obj.ComposeObjects(); //new RegisterEmployee();
                      form.Owner = this;
                      form.Show();
             }
@@ -72,7 +71,7 @@ namespace POSC
         private void passwordBox_PasswordChanged(object sender, RoutedEventArgs e)
         {
             var pass = sender as PasswordBox;
-            loginViewModeL.Password = pass.Password;
+            loginViewModeL.Password = "Proyectos8@";// pass.Password;
         }
     }
 }
