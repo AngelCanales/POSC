@@ -36,8 +36,8 @@ namespace POSC
 
             userManager = new UserManager<IdentityUser>(new UserStore<IdentityUser>(new IdentityDbContext("POSC")));
             this.loginViewModeL = new LoginViewModeL();
-
-
+            loginViewModeL.Email = "POSC@gmail.com";
+            loginViewModeL.Password = "Proyectos8@";
             this.DataContext = loginViewModeL;
             InitializeComponent();
         }
@@ -49,8 +49,8 @@ namespace POSC
             
             if (user != null)
             {
-                ConfigureContainer();
-                RegisterEmployee form = this.container.Get<RegisterEmployee>(); //new RegisterEmployee();
+                var x = new NinjectUtil<RegisterEmployee>();
+                RegisterEmployee form = x.ComposeObjects(); //new RegisterEmployee();
                      form.Owner = this;
                      form.Show();
             }
@@ -62,12 +62,7 @@ namespace POSC
            
         }
 
-        private void ConfigureContainer()
-        {
-            this.container = new StandardKernel();
-
-            container.Bind<RegisterEmployeeViewModel>().ToFactory();
-        }
+    
         private void button_Click(object sender, RoutedEventArgs e)
         {
            Login();

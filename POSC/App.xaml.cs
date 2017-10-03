@@ -17,6 +17,7 @@ namespace POSC
     using Ninject.Extensions.Factory;
     using ModelsView;
     using View;
+    using System.Linq;
 
     public partial class App : Application
     {
@@ -40,7 +41,7 @@ namespace POSC
         private void ComposeObjects()
 
         {
-         //   this.container.Get<POSCContext>().Customer.ToList();
+           this.container.Get<POSCContext>().Customer.ToList();
             Current.MainWindow = this.container.Get<MainWindow>();
             Current.MainWindow.Title = "Punto de Venta POSC";
         }

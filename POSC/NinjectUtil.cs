@@ -1,5 +1,6 @@
 ﻿using Ninject;
 using Ninject.Extensions.Factory;
+using Ninject.Syntax;
 using POSC.ModelsView;
 using System;
 using System.Collections.Generic;
@@ -9,14 +10,25 @@ using System.Threading.Tasks;
 
 namespace POSC
 {
-public class NinjectUtil<T>
+public class NinjectUtil<Tn>
+         where Tn : class
     {
         private IKernel container;
-        private void ConfigureContainer<T>()
+
+      
+       public void ConfigureContainer()
         {
             this.container = new StandardKernel();
+            container.Bind<Tn>().ToFactory();
 
-            container.Bind<T>().ToFactory();
         }
+
+        public Tn ComposeObjects()
+
+        {
+        return (Tn) this.container.Get<Tn>();
+        }
+
+       
     }
 }
