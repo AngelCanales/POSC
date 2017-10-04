@@ -21,15 +21,15 @@
         <Label x:Name="label6" Content="Contact Phone :" HorizontalAlignment="Left" Margin="34,242,0,0" VerticalAlignment="Top"/>
         <TextBox x:Name="textBox5" HorizontalAlignment="Left" Height="23" Margin="133,286,0,-19" TextWrapping="Wrap" Text="{Binding ContactName}" VerticalAlignment="Top" Width="120" RenderTransformOrigin="0.496,1.108"/>
         <Label x:Name="label7" Content="Name Contact:" HorizontalAlignment="Left" Margin="36,283,0,-19" VerticalAlignment="Top"/>
-        <ComboBox x:Name="comboBox" ItemsSource="{Binding EmployeesType}"
-                                      
-                  SelectedValue="{Binding RegisterEmployeeViewModel.EmployeesTypeID}"  
+        <ComboBox x:Name="comboBox" 
+                  ItemsSource="{Binding EmployeesType}"
+                  SelectedValue="{Binding EmployeesTypeID}"  
                   DisplayMemberPath="Name" 
                   SelectedValuePath="Id" 
                   HorizontalAlignment="Left" Margin="133,329,0,0" VerticalAlignment="Top" Width="120"/>
 
         <ComboBox x:Name="comboBox1" ItemsSource="{Binding Store}"
-                  SelectedValue="{Binding RegisterEmployeeViewModel.StoreId}"  
+                  SelectedValue="{Binding StoreId}"  
                   DisplayMemberPath="Name" 
                   SelectedValuePath="Id" 
                   HorizontalAlignment="Left" Margin="133,368,0,0" VerticalAlignment="Top" Width="120"/>

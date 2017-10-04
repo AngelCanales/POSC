@@ -12,9 +12,10 @@
          d:DataContext="{d:DesignInstance Type=viewModel:RegisterEmployeeViewModel, IsDesignTimeCreatable=True}"
        
         Title="RegisterEmployee" Height="508.769" Width="712.055">
-    <Grid>
+    <Grid HorizontalAlignment="Left" Width="712" Margin="0,0,-8,-5">
         <StackPanel:Address HorizontalAlignment="Left" Height="270" Margin="366,18,0,0" VerticalAlignment="Top" Width="319" />
         <StackPanel:RegisterUser HorizontalAlignment="Left" Height="438" Margin="10,20,0,0" VerticalAlignment="Top" Width="339"/>
+        <Button x:Name="button" Content="Register" HorizontalAlignment="Left" Margin="413,353,0,0" VerticalAlignment="Top" Width="126" Height="50" Click="button_Click"/>
 
     </Grid>
 </Window>
