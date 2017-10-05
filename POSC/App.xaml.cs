@@ -14,7 +14,10 @@ namespace POSC
     using System.Windows;
 
     using Microsoft.AspNet.Identity.Owin;
-
+    using Ninject.Extensions.Factory;
+    using ModelsView;
+    using View;
+    using System.Linq;
 
     public partial class App : Application
     {
@@ -33,13 +36,12 @@ namespace POSC
             this.container = new StandardKernel();
         container.Bind<POSCContext>().To<POSCContext>();
             container.Bind<DbContext>().To<POSCContext>();
-
         }
 
         private void ComposeObjects()
 
         {
-         //   this.container.Get<POSCContext>().Customer.ToList();
+           this.container.Get<POSCContext>().Customer.ToList();
             Current.MainWindow = this.container.Get<MainWindow>();
             Current.MainWindow.Title = "Punto de Venta POSC";
         }

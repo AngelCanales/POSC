@@ -15,6 +15,8 @@ using System.Windows.Controls;
 using POSC.View;
 using Microsoft.AspNet.Identity.EntityFramework;
 using DataBase.Contexts;
+using Ninject;
+using Ninject.Extensions.Factory;
 
 namespace POSC
 {
@@ -25,10 +27,16 @@ namespace POSC
     {
         private readonly LoginViewModeL loginViewModeL;
         UserManager<IdentityUser> userManager;
-        public MainWindow()
-        {
+
+
+        public MainWindow() { 
+
+           
+
             userManager = new UserManager<IdentityUser>(new UserStore<IdentityUser>(new IdentityDbContext("POSC")));
             this.loginViewModeL = new LoginViewModeL();
+            loginViewModeL.Email = "POSC@gmail.com";
+            loginViewModeL.Password = "Proyectos8@";
             this.DataContext = loginViewModeL;
             InitializeComponent();
         }
@@ -40,7 +48,8 @@ namespace POSC
             
             if (user != null)
             {
-                     MenuPOSC form = new  MenuPOSC();
+                var obj = new NinjectUtil<RegisterEmployee, RegisterEmployeeViewModel>();
+                RegisterEmployee form = obj.ComposeObjects(); //new RegisterEmployee();
                      form.Owner = this;
                      form.Show();
             }
@@ -51,6 +60,8 @@ namespace POSC
 
            
         }
+
+    
         private void button_Click(object sender, RoutedEventArgs e)
         {
            Login();
@@ -60,7 +71,7 @@ namespace POSC
         private void passwordBox_PasswordChanged(object sender, RoutedEventArgs e)
         {
             var pass = sender as PasswordBox;
-            loginViewModeL.Password = pass.Password;
+            loginViewModeL.Password = "Proyectos8@";// pass.Password;
         }
     }
 }

@@ -16,13 +16,19 @@ using System.Windows.Shapes;
 namespace POSC.UserControls
 {
     /// <summary>
-    /// Interaction logic for RegisterEmployee.xaml
+    /// Interaction logic for RegisterUser.xaml
     /// </summary>
-    public partial class RegisterEmployee : UserControl
+    public partial class RegisterUser : UserControl
     {
-        public RegisterEmployee()
+        public RegisterUser()
         {
             InitializeComponent();
+        }
+
+        private void passwordBox_PasswordChanged(object sender, RoutedEventArgs e)
+        {
+            var pass = sender as PasswordBox;
+         //   loginViewModeL.Password = "Proyectos8@";// pass.Password;
         }
     }
 }
