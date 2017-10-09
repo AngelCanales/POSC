@@ -17,6 +17,7 @@ public  class RegisterEmployeeViewModel
         public int EmployeesTypeID { get; set; }
         public ICollection<EmployeesType> EmployeesType { get; set; }
 
+
         public string Name { get; set; }
 
         public string Email { get; set; }
