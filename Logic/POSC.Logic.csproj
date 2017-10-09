@@ -57,6 +57,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Logic\EmployeesLogic.cs" />
     <Compile Include="Logic\EmployeesTypeLogic.cs" />
     <Compile Include="Logic\FiscalDataLogic.cs" />
     <Compile Include="Logic\ResidentialAreaLogic.cs" />

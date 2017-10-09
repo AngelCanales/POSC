@@ -24,5 +24,10 @@ namespace Logic.Logic
         {
             return unitofwork.ResidentialAreaRepository.All().ToList();
         }
+
+        public ResidentialArea GetResidentialArea(int id)
+        {
+            return  unitofwork.ResidentialAreaRepository.Find(id);
+        }
     }
 }
