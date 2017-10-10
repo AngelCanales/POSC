@@ -55,9 +55,12 @@ namespace POSC.View
         private void button_Click(object sender, RoutedEventArgs e)
         {
             var x = registerEmployeeViewModel;
+            var y = registerEmployeeViewModel.
             var sector = sectorLogic.GetSector(registerEmployeeViewModel.SectorID);
             var residentialArea = residentialAreaLogic.GetResidentialArea(registerEmployeeViewModel.ResidentialAreaID);
             var store = storeLogic.GetStore(registerEmployeeViewModel.StoreId);
+            var employeesType = employeesTypeLogic.GetEmployeesType(registerEmployeeViewModel.EmployeesTypeID);
+
             var address = new Address
             {
                 Avenue = registerEmployeeViewModel.Avenue,
@@ -79,7 +82,7 @@ namespace POSC.View
             employees.Store = store;
             employees.User = null;
             employees.UserId = null;
-            employees.EmployeesType = null;
+            employees.EmployeesType = employeesType;
 
 
         }
