@@ -5,7 +5,7 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:POSC.UserControls"
              xmlns:ModelsView="clr-namespace:POSC.ModelsView" x:Class="POSC.UserControls.RegisterUser"
-             mc:Ignorable="d" Height="415.086" Width="305.172">
+             mc:Ignorable="d" Height="415.086" Width="305.172" >
     <Grid Margin="0,0,10,0" Background="{DynamicResource {x:Static SystemColors.WindowBrushKey}}">
         <TextBox x:Name="textBox" HorizontalAlignment="Left" Height="23" Margin="133,36,0,0" TextWrapping="Wrap" Text="{Binding Name}" VerticalAlignment="Top" Width="120"/>
         <TextBox x:Name="textBox1" HorizontalAlignment="Left" Height="23" Margin="133,77,0,0" TextWrapping="Wrap" Text="{Binding Email}" VerticalAlignment="Top" Width="120"/>

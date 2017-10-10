@@ -4,6 +4,7 @@ using Logic.Logic;
 using Ninject;
 using Ninject.Extensions.Factory;
 using POSC.ModelsView;
+using POSC.UserControls;
 using System;
 using System.Collections.Generic;
 using System.Data.Entity;
@@ -18,7 +19,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
-
+using DataBase.Models;
 namespace POSC.View
 {
     /// <summary>
@@ -55,13 +56,12 @@ namespace POSC.View
         private void button_Click(object sender, RoutedEventArgs e)
         {
             var x = registerEmployeeViewModel;
-            var y = registerEmployeeViewModel.
-            var sector = sectorLogic.GetSector(registerEmployeeViewModel.SectorID);
+            var sectors = sectorLogic.GetSector(registerEmployeeViewModel.SectorID);
             var residentialArea = residentialAreaLogic.GetResidentialArea(registerEmployeeViewModel.ResidentialAreaID);
             var store = storeLogic.GetStore(registerEmployeeViewModel.StoreId);
-            var employeesType = employeesTypeLogic.GetEmployeesType(registerEmployeeViewModel.EmployeesTypeID);
-
-            var address = new Address
+            var employeesTypes = employeesTypeLogic.GetEmployeesType(registerEmployeeViewModel.EmployeesTypeID);
+            var y = registerEmployeeViewModel.Password;
+            var address = new DataBase.Models.Address
             {
                 Avenue = registerEmployeeViewModel.Avenue,
                 ResidentialArea = residentialArea,
@@ -69,7 +69,7 @@ namespace POSC.View
                 DeliverPhone = registerEmployeeViewModel.PhoneNumber2,
                 DeliverTo = registerEmployeeViewModel.ContactName,
                 References = registerEmployeeViewModel.References,
-                Sector = sector,
+                Sector = sectors,
                 Street =  registerEmployeeViewModel.Street,
             };
             var employees = new Employees();
@@ -82,7 +82,7 @@ namespace POSC.View
             employees.Store = store;
             employees.User = null;
             employees.UserId = null;
-            employees.EmployeesType = employeesType;
+            employees.EmployeesType = employeesTypes;
 
 
         }

@@ -41,3 +41,17 @@ C:\Users\canales\Source\Repos\POSC\DataBase\obj\Debug\POSC.DataBase.csprojResolv
 C:\Users\canales\Source\Repos\POSC\DataBase\obj\Debug\POSC.DataBase.csproj.CoreCompileInputs.cache
 C:\Users\canales\Source\Repos\POSC\DataBase\obj\Debug\POSC.DataBase.dll
 C:\Users\canales\Source\Repos\POSC\DataBase\obj\Debug\POSC.DataBase.pdb
+C:\Users\Angel.Canales\Desktop\POSCREpo\DataBase\bin\Debug\POSC.DataBase.dll.config
+C:\Users\Angel.Canales\Desktop\POSCREpo\DataBase\bin\Debug\POSC.DataBase.dll
+C:\Users\Angel.Canales\Desktop\POSCREpo\DataBase\bin\Debug\POSC.DataBase.pdb
+C:\Users\Angel.Canales\Desktop\POSCREpo\DataBase\bin\Debug\EntityFramework.dll
+C:\Users\Angel.Canales\Desktop\POSCREpo\DataBase\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Angel.Canales\Desktop\POSCREpo\DataBase\bin\Debug\Microsoft.AspNet.Identity.Core.dll
+C:\Users\Angel.Canales\Desktop\POSCREpo\DataBase\bin\Debug\Microsoft.AspNet.Identity.EntityFramework.dll
+C:\Users\Angel.Canales\Desktop\POSCREpo\DataBase\bin\Debug\EntityFramework.xml
+C:\Users\Angel.Canales\Desktop\POSCREpo\DataBase\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Angel.Canales\Desktop\POSCREpo\DataBase\bin\Debug\Microsoft.AspNet.Identity.Core.xml
+C:\Users\Angel.Canales\Desktop\POSCREpo\DataBase\bin\Debug\Microsoft.AspNet.Identity.EntityFramework.xml
+C:\Users\Angel.Canales\Desktop\POSCREpo\DataBase\obj\Debug\POSC.DataBase.csprojResolveAssemblyReference.cache
+C:\Users\Angel.Canales\Desktop\POSCREpo\DataBase\obj\Debug\POSC.DataBase.dll
+C:\Users\Angel.Canales\Desktop\POSCREpo\DataBase\obj\Debug\POSC.DataBase.pdb

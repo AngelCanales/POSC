@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
@@ -21,8 +22,9 @@ namespace POSC.UserControls
     public partial class RegisterUser : UserControl 
     {
          public static readonly DependencyProperty SecurePasswordProperty = DependencyProperty.Register(
-           "SecurePassword", typeof(SecureString), typeof(BindablePasswordBox), new PropertyMetadata(default(SecureString)));
+           "SecurePassword", typeof(SecureString), typeof(RegisterUser), new PropertyMetadata(default(SecureString)));
 
+        public  string  passw { get; set; }
         public SecureString SecurePassword
         {
             get { return (SecureString)GetValue(SecurePasswordProperty); }
@@ -36,8 +38,10 @@ namespace POSC.UserControls
         private void passwordBox_PasswordChanged(object sender, RoutedEventArgs e)
         {
             var pass = sender as PasswordBox;
-           // https://stackoverflow.com/questions/13513472/getting-password-from-passwordbox
-            pass.SecurePassword;
+            SecurePassword = pass.SecurePassword;
+            this.passw = pass.Password;
         }
+
+       
     }
 }
