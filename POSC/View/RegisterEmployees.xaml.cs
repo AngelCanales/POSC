@@ -31,14 +31,16 @@ namespace POSC.View
         private readonly StoreLogic storeLogic;
         private readonly ResidentialAreaLogic residentialAreaLogic;
         private readonly SectorLogic sectorLogic;
+        private readonly EmployeesLogic employeesLogic;
 
-       
-        public RegisterEmployee(EmployeesTypeLogic employeesTypeLogic, StoreLogic storeLogic, ResidentialAreaLogic residentialAreaLogic, SectorLogic sectorLogic)
+
+        public RegisterEmployee(EmployeesTypeLogic employeesTypeLogic, StoreLogic storeLogic, ResidentialAreaLogic residentialAreaLogic, SectorLogic sectorLogic, EmployeesLogic employeesLogic)
         {
             this.sectorLogic = sectorLogic;
             this.residentialAreaLogic = residentialAreaLogic;
             this.storeLogic = storeLogic;
             this.employeesTypeLogic = employeesTypeLogic;
+            this.employeesLogic = employeesLogic;
             var x = sectorLogic.GetAll();
      
             this.registerEmployeeViewModel = new RegisterEmployeeViewModel();
@@ -53,6 +55,36 @@ namespace POSC.View
         private void button_Click(object sender, RoutedEventArgs e)
         {
             var x = registerEmployeeViewModel;
-         }
+            var y = registerEmployeeViewModel.
+            var sector = sectorLogic.GetSector(registerEmployeeViewModel.SectorID);
+            var residentialArea = residentialAreaLogic.GetResidentialArea(registerEmployeeViewModel.ResidentialAreaID);
+            var store = storeLogic.GetStore(registerEmployeeViewModel.StoreId);
+            var employeesType = employeesTypeLogic.GetEmployeesType(registerEmployeeViewModel.EmployeesTypeID);
+
+            var address = new Address
+            {
+                Avenue = registerEmployeeViewModel.Avenue,
+                ResidentialArea = residentialArea,
+                Boulevard =  registerEmployeeViewModel.Boulevard,
+                DeliverPhone = registerEmployeeViewModel.PhoneNumber2,
+                DeliverTo = registerEmployeeViewModel.ContactName,
+                References = registerEmployeeViewModel.References,
+                Sector = sector,
+                Street =  registerEmployeeViewModel.Street,
+            };
+            var employees = new Employees();
+            employees.Address = address;
+            employees.ContactName = registerEmployeeViewModel.ContactName;
+            employees.Name = registerEmployeeViewModel.Name;
+            employees.PhoneNumber1 = registerEmployeeViewModel.PhoneNumber1;
+            employees.PhoneNumber2 = registerEmployeeViewModel.PhoneNumber2;
+            employees.RTN = registerEmployeeViewModel.RTN;
+            employees.Store = store;
+            employees.User = null;
+            employees.UserId = null;
+            employees.EmployeesType = employeesType;
+
+
+        }
     }
 }

@@ -23,5 +23,15 @@ namespace Logic.Logic
         {
             return unitofwork.SectorRepository.All().ToList();
         }
+
+        public async Task<Sector> GetSectorasync(int id)
+        {
+            return await unitofwork.SectorRepository.FindAsync(id);
+        }
+
+        public Sector GetSector(int id)
+        {
+            return  unitofwork.SectorRepository.Find(id);
+        }
     }
 }

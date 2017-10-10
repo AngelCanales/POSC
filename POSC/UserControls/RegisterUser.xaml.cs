@@ -18,8 +18,16 @@ namespace POSC.UserControls
     /// <summary>
     /// Interaction logic for RegisterUser.xaml
     /// </summary>
-    public partial class RegisterUser : UserControl
+    public partial class RegisterUser : UserControl 
     {
+         public static readonly DependencyProperty SecurePasswordProperty = DependencyProperty.Register(
+           "SecurePassword", typeof(SecureString), typeof(BindablePasswordBox), new PropertyMetadata(default(SecureString)));
+
+        public SecureString SecurePassword
+        {
+            get { return (SecureString)GetValue(SecurePasswordProperty); }
+            set { SetValue(SecurePasswordProperty, value); }
+        }
         public RegisterUser()
         {
             InitializeComponent();
@@ -28,7 +36,8 @@ namespace POSC.UserControls
         private void passwordBox_PasswordChanged(object sender, RoutedEventArgs e)
         {
             var pass = sender as PasswordBox;
-         //   loginViewModeL.Password = "Proyectos8@";// pass.Password;
+           // https://stackoverflow.com/questions/13513472/getting-password-from-passwordbox
+            pass.SecurePassword;
         }
     }
 }

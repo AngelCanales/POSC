@@ -23,5 +23,10 @@ namespace Logic.Logic
         {
             return unitofwork.EmployeesTypeRepository.All().ToList();
         }
+
+        public async Task<EmployeesType> GetEmployeesType(int id)
+        {
+            return await unitofwork.EmployeesTypeRepository.FindAsync(id);
+        }
     }
 }

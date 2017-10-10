@@ -24,5 +24,15 @@ namespace Logic.Logic
         {
             return unitofwork.StoreRepository.All().ToList();
         }
+
+        public async Task<Store> GetStoreAsync(int id)
+        {
+            return await unitofwork.StoreRepository.FindAsync(id);
+        }
+
+        public Store GetStore(int id)
+        {
+            return  unitofwork.StoreRepository.Find(id);
+        }
     }
 }

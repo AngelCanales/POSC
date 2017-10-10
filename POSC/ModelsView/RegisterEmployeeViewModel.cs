@@ -46,6 +46,8 @@ public  class RegisterEmployeeViewModel
 
         public string Boulevard { get; set; }
 
+         public string Password { get; set; }
+
         public string References { get; set; }
     }
 }
