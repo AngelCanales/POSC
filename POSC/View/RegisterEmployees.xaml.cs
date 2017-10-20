@@ -55,36 +55,58 @@ namespace POSC.View
 
         private void button_Click(object sender, RoutedEventArgs e)
         {
-            var x = registerEmployeeViewModel;
-            var sectors = sectorLogic.GetSector(registerEmployeeViewModel.SectorID);
-            var residentialArea = residentialAreaLogic.GetResidentialArea(registerEmployeeViewModel.ResidentialAreaID);
-            var store = storeLogic.GetStore(registerEmployeeViewModel.StoreId);
-            var employeesTypes = employeesTypeLogic.GetEmployeesType(registerEmployeeViewModel.EmployeesTypeID);
-            var y = registerEmployeeViewModel.Password;
-            var address = new DataBase.Models.Address
+           
+          
+            if (employeesLogic.verifypassword(registerEmployeeViewModel.Password1, registerEmployeeViewModel.Password2))
             {
-                Avenue = registerEmployeeViewModel.Avenue,
-                ResidentialArea = residentialArea,
-                Boulevard =  registerEmployeeViewModel.Boulevard,
-                DeliverPhone = registerEmployeeViewModel.PhoneNumber2,
-                DeliverTo = registerEmployeeViewModel.ContactName,
-                References = registerEmployeeViewModel.References,
-                Sector = sectors,
-                Street =  registerEmployeeViewModel.Street,
+                var sectors = sectorLogic.GetSector(registerEmployeeViewModel.SectorID);
+                var residentialArea = residentialAreaLogic.GetResidentialArea(registerEmployeeViewModel.ResidentialAreaID);
+                var store = storeLogic.GetStore(registerEmployeeViewModel.StoreId);
+                var employeesTypes = employeesTypeLogic.GetEmployeesType(registerEmployeeViewModel.EmployeesTypeID);
+                var role = employeesLogic.RolesGET(employeesTypes.Name);
+                var address = new DataBase.Models.Address
+                {
+                    Avenue = registerEmployeeViewModel.Avenue,
+                    ResidentialArea = residentialArea,
+                    Boulevard = registerEmployeeViewModel.Boulevard,
+                    DeliverPhone = registerEmployeeViewModel.PhoneNumber2,
+                    DeliverTo = registerEmployeeViewModel.ContactName,
+                    References = registerEmployeeViewModel.References,
+                    Sector = sectors,
+                    Street = registerEmployeeViewModel.Street,
+                };
+                var employees = new Employees();
+                employees.Address = address;
+                employees.ContactName = registerEmployeeViewModel.ContactName;
+                employees.Name = registerEmployeeViewModel.Name;
+                employees.PhoneNumber1 = registerEmployeeViewModel.PhoneNumber1;
+                employees.PhoneNumber2 = registerEmployeeViewModel.PhoneNumber2;
+                employees.RTN = registerEmployeeViewModel.RTN;
+                employees.Store = store;
+                employees.User = null;
+                employees.UserId = null;
+                employees.EmployeesType = employeesTypes;
+
+                employeesLogic.Create(employees,registerEmployeeViewModel.Email,registerEmployeeViewModel.Password1,role);
+                
             };
-            var employees = new Employees();
-            employees.Address = address;
-            employees.ContactName = registerEmployeeViewModel.ContactName;
-            employees.Name = registerEmployeeViewModel.Name;
-            employees.PhoneNumber1 = registerEmployeeViewModel.PhoneNumber1;
-            employees.PhoneNumber2 = registerEmployeeViewModel.PhoneNumber2;
-            employees.RTN = registerEmployeeViewModel.RTN;
-            employees.Store = store;
-            employees.User = null;
-            employees.UserId = null;
-            employees.EmployeesType = employeesTypes;
+
+            MessageBox.Show("No es igual");
 
 
+        }
+
+     
+        private void passwordBox_PasswordChanged(object sender, RoutedEventArgs e)
+        {
+            var pass = sender as PasswordBox;
+            this.registerEmployeeViewModel.Password1 = pass.Password;
+        }
+
+        private void passwordBox_PasswordChanged1(object sender, RoutedEventArgs e)
+        {
+            var pass = sender as PasswordBox;
+            this.registerEmployeeViewModel.Password2 = pass.Password;
         }
     }
 }

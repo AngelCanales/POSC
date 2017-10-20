@@ -21,27 +21,14 @@ namespace POSC.UserControls
     /// </summary>
     public partial class RegisterUser : UserControl 
     {
-         public static readonly DependencyProperty SecurePasswordProperty = DependencyProperty.Register(
-           "SecurePassword", typeof(SecureString), typeof(RegisterUser), new PropertyMetadata(default(SecureString)));
-
-        public  string  passw { get; set; }
-        public SecureString SecurePassword
-        {
-            get { return (SecureString)GetValue(SecurePasswordProperty); }
-            set { SetValue(SecurePasswordProperty, value); }
-        }
+     
         public RegisterUser()
         {
             InitializeComponent();
+
         }
 
-        private void passwordBox_PasswordChanged(object sender, RoutedEventArgs e)
-        {
-            var pass = sender as PasswordBox;
-            SecurePassword = pass.SecurePassword;
-            this.passw = pass.Password;
-        }
+  
 
-       
     }
 }

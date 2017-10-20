@@ -50,7 +50,6 @@ namespace DataBase.Contexts
 
         public DbSet<ResidentialArea> ResidentialArea { get; set; }
 
-    
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
